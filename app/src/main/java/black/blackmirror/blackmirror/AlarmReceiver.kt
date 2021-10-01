@@ -3,25 +3,16 @@ package black.blackmirror.blackmirror
 import android.R
 import android.annotation.SuppressLint
 import android.app.AlarmManager
-import android.app.Notification
 import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.os.Handler
-import android.os.Looper
-import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import java.text.DateFormat
-import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.collections.ArrayList
 import kotlin.random.Random
-import kotlin.random.Random.Default.nextInt
-import android.app.NotificationManager
 import android.graphics.BitmapFactory
 
 
@@ -136,7 +127,7 @@ class AlarmReceiver : BroadcastReceiver() {
 
         fun sendNotification2 (context: Context){
             var intent = Intent(context,
-                AdvertisementActivity::class.java)
+                AdvertisementActivity1::class.java)
             var pendingIntent = PendingIntent.getActivity(context,0,intent,PendingIntent.FLAG_CANCEL_CURRENT)
 
             val builder = NotificationCompat.Builder(context,CHANNEl_ID)

@@ -146,7 +146,7 @@ class MainActivity : AppCompatActivity() {
     fun sendNotification() {
 
 
-        var intent = Intent(applicationContext, AdvertisementActivity::class.java)
+        var intent = Intent(applicationContext, AdvertisementActivity1::class.java)
         var pendingIntent = PendingIntent.getActivity(
             applicationContext,
             0,

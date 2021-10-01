@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BlackMirror">
         <activity
-            android:name=".AdvertisementActivity"
+            android:name=".AdvertisementActivity1"
             android:screenOrientation="portrait"
             android:exported="true" />
 
