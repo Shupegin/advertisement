@@ -26,10 +26,7 @@ class AlarmReceiver : BroadcastReceiver() {
     }
 
     private fun startImage(context: Context) {
-        val myArray = arrayOf(1, 2, 3, 4)
 
-        val rand = Random.nextInt(myArray.size)
-        val name = "${myArray[rand]}"
 
         sendNotification2(context)
 
@@ -69,7 +66,7 @@ class AlarmReceiver : BroadcastReceiver() {
 
         fun one(context: Context){
             val time1 = Calendar.getInstance()
-            time1[Calendar.HOUR_OF_DAY] = 12
+            time1[Calendar.HOUR_OF_DAY] = 9
             time1[Calendar.MINUTE] = 5
             time1[Calendar.SECOND] = 0
             var manager = context.getSystemService(AppCompatActivity.ALARM_SERVICE) as AlarmManager
@@ -127,7 +124,7 @@ class AlarmReceiver : BroadcastReceiver() {
 
         fun sendNotification2 (context: Context){
             var intent = Intent(context,
-                AdvertisementActivity1::class.java)
+                AdvertisementActivity::class.java)
             var pendingIntent = PendingIntent.getActivity(context,0,intent,PendingIntent.FLAG_CANCEL_CURRENT)
 
             val builder = NotificationCompat.Builder(context,CHANNEl_ID)
